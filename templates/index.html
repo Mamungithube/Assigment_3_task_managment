@@ -12,14 +12,13 @@
           <button class="btn btn-danger btn-sm m-2" disabled >{{cat.Category_Name}} </button>
           {% endfor %}
         </p>
-        <div class = "d-flex gap-2">
-        {% if task.is_complated == true %}
-        <a href="" class="btn btn-primary">complete</a>
+        {% if task.is_completed == True %}
+        <button >completed</button>
         {% else %}
         <a href="{% url 'Edit_text' task.id %}" class="btn btn-primary">Edit</a>
         <a href="{% url 'delete' task.id %}" class="btn btn-primary">delete</a>
         {% endif %}
-        </div>
+
         
       </div>
     </div>

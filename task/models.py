@@ -6,6 +6,6 @@ class task(models.Model):
     taskDescription = models.TextField(max_length=250)
     Task_Assign_Date = models.DateField()
     catagory= models.ManyToManyField(Category)
-    _completed = models.BooleanField(default=False)
+    is_completed = models.BooleanField(default=False)
     def __str__(self):
         return self.taskTitle
